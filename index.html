@@ -520,6 +520,16 @@ document.addEventListener("mousemove", function(e) {
       }, 600); // フェードアウト後に削除
     });
 
+// スマホ用：ユーザー操作で再生開始
+document.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play().then(() => {
+      console.log("音楽再生を開始しました（ユーザー操作）");
+    }).catch((err) => {
+      console.warn("再生に失敗:", err);
+    });
+  }
+}, { once: true }); // 最初の1回のタップだけで実行
 
   </script>
 
