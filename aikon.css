@@ -134,6 +134,42 @@ body {
     z-index: 1000;             /* 他の要素の上に表示されるように */
   }
 
+/* 音楽プレイヤーなどの最大幅を画面幅に応じて調整 */
+.music-player,
+.volume-control,
+.search-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* タブボタンの表示を折り返し対応にする */
+.tab-buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* リンクボタンのサイズ調整 */
+.link-button {
+  width: 90%;
+  font-size: 16px;
+}
+
+/* タイトルなども少し小さく */
+h1 {
+  font-size: 1.5em;
+}
+
+/* スマホ対応の余白とパディング */
+body {
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .link-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
 
   
   
